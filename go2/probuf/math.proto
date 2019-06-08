@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package mathrpc;
+
+message MathRequest {
+    float m1 = 1;
+    float m2 = 2;
+
+}
+
+message MathResponse {
+    float res = 1;
+}
+
+service MathService {
+    rpc MathCalcuRpc(MathRequest) returns (MathResponse){}
+}
